@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+Visitalo: https://chat-mundial.netlify.app
+![Captura de pantalla (269)](https://user-images.githubusercontent.com/91045865/182770456-f380f207-f528-4614-944f-3ae9a0a68df0.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

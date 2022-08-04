@@ -46,11 +46,11 @@ button {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 20px;
 }
 .header__left img {
   width: 40px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 .header__left h3 {
   font-size: 18px;
@@ -58,7 +58,9 @@ button {
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 6px;
+}
+.header__left h3 span{
+  margin-left: 6px;
 }
 .header__left .usuario {
   max-width: 400px;
@@ -70,6 +72,9 @@ button {
 .header__rigth button {
   color: #fff;
   display: flex;
+}
+.header__rigth > button{
+  margin-right: 10px;
 }
 .configuracion {
   position: relative;
@@ -103,10 +108,12 @@ button {
   display: grid;
   grid-template-columns: 20px 1fr;
   align-items: center;
-  gap: 10px;
 }
 .opciones button:hover {
   background: #0b141aa5;
+}
+.opciones button span{
+  margin-left: 10px;
 }
 
 /*=============== formulario ===============*/
@@ -170,6 +177,10 @@ button {
 .chats {
   border-radius: 5px;
   background: #0b141a;
+  background-image: linear-gradient(#0b141ae8, #0b141ae5), url("/public/fondo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   overflow-y: auto;
   padding: 90px 9%;
@@ -182,7 +193,7 @@ button {
   width: 10px;
   background: #202c33;
 }
-.chats::after {
+/* .chats::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -198,7 +209,7 @@ button {
   background-size: cover;
   opacity: 0.06;
   z-index: 1;
-}
+} */
 .chats p {
   display: block;
   width: fit-content;
@@ -451,13 +462,13 @@ button {
   .header__left .usuario {
     display: none;
   }
+  .header__rigth > button{
+    margin-right: 0;
+  }
 }
 @media (max-width: 330px) {
   .opciones {
     width: 200px;
-  }
-  .header__left {
-    gap: 10px;
   }
   .form {
     padding: 5px 0;

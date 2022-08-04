@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect } from "react";
+import Header from "./components/Header";
+import Formulario from "./components/Formulario";
+import Chats from "./components/Chats";
+import useMensajes from "./hooks/useMensajes";
+import { useNavigate } from "react-router-dom";
+import Modal from "./components/Modal";
 
 function App() {
+  const navigate = useNavigate();
+  const { usuario } = useMensajes();
+  const { modal } = useMensajes();
+
+  useEffect(() => {
+    if (usuario === "") {
+      navigate("/");
+    }
+  }, [usuario, navigate]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Chats />
+      <Formulario />
+      {modal && <Modal />}
+    </>
   );
 }
 
